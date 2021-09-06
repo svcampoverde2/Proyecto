@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="logoFS.ico">
+  <title>Formulario de Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="css/formNewReg.css">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:200'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15/css/all.css">
+  
+  <link rel="stylesheet" href="javascrip1.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">  
+  <link rel="stylesheet" href="fonts/style.css">
+</head>
+<body  >
+ 
+    <img class="fondo" src="IMAGEN FASHION STORE-12.png" alt="">
+    
+    <div class="options">
+      <div class="nav"><a href="Welcome.html"><span class="icon-home"> </div>
+      <div class="nav"><a href="#"><span class="icon-shopping-cart"></div>
+    </div>
+     
+ <form action="#" class="form-box animated fadeInUp"  oninput = " return validar()" > 
+  <img class="logo_formulario" src="LOGO FASHION STORE-08.png" alt="">
+ 
+    <h4>Ingrese sus datos</h4>
+    <div class="radio">
+      <input type="radio" name="dni"required id="cedula">
+      <label for="cedula">Cedula</label>
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      <input type="radio" name="dni" required id="ruc">
+      <label for="ruc">Pasaporte</label>
+    </div>
+ 
+  <!-- onsubmit = " return validar()"  pattern="^[0-9]*$" -->
+     <input class="controls" type="text" id = "ced" 
+     required placeholder ="Ingrese cedula o pasaporte" 
+     pattern = "^\d{10}*$" size="10" maxlength ="10" oninput="if(this.value > value.maxLength) 
+     this.value = this.value.slice(0, this.maxLength)">
+    <div id="salida"></div>
+    <script src ="/js/javascrip1.js">
+       function validar() {
+        var cad = document.getElementById("ced").value.trim();
+        var total = 0;
+        var longitud = cad.length;
+        var longcheck = longitud - 1;
+
+        if (cad !== "" && longitud === 10){
+          for(i = 0; i < longcheck; i++){
+            if (i%2 === 0) {
+              var aux = cad.charAt(i) * 2;
+              if (aux > 9) aux -= 9;
+              total += aux;
+            } else {
+              total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
+            }
+          }
+
+          total = total % 10 ? 10 - total % 10 : 0;
+
+          if (cad.charAt(longitud-1) == total) {
+            document.getElementById("salida").innerHTML = ("Cedula Válida");
+          }else{
+            document.getElementById("salida").innerHTML = ("Cedula Inválida");
+          }
+        }
+      }
+    </script>
+    
+    <input class="controls" type="text" required placeholder="Ingrese su nombre" pattern="^[A-Za-z ]*$" >
+    <input class="controls" type="date" required placeholder="Ingrese la fecha de nacimiento"> 
+    
+    <div class="radio">
+     
+      <input type="radio" name="sexo"required id="hombre">
+      <label for="hombre">Hombre</label>
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      <input type="radio" name="sexo" required id="mujer">
+      <label for="mujer">Mujer</label>
+     
+    </div>
+    
+    <input class="controls" type="number" name="edad" id="edad" required placeholder="Ingrese su edad" min="0" max="100">
+    <input class="controls" type="email"  name="correo" id="correo" required placeholder="Ingrese su correo" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+    <input class="controls" type="text" estado="civil"required placeholder="Selccione el estado civil" list="civil">
+    <datalist id = "civil">
+    <option value="Soltero">
+    <option  value = "Casado">  
+    <option value="Viudo">
+    <option  value = "Union libre"> 
+    <option value="Divorciado">
+    </option>
+    </datalist>
+    <input class="controls" type="text" name="Telefono" id="telefono" required placeholder="Ingrese su número de telefono" pattern="^[13]*$++[0-9]*$" maxlength="13" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)">
+    <input class="controls" type="text" name="dirección" id="dirección" required placeholder="Ingrese su dirección" pattern="^[A-Za-z 0-9 .!#$%&’]*$">
+    
+    <input type="checkbox" required id = "Activar">
+    <label for="Activar">Acepto los terminos y condiciones</label>
+    
+    <br>
+  
+  <button type="submit">Guardar</button>
+  <div class="content-foo">
+    <a href="Login.html">¿Ya tengo Cuenta?</a>
+  </div>
+
+</form>
+    <footer>
+      <p class="footer">
+        <b>2021 © Derechos Reservados a IMAGINE SOFT S.A. Guayaquil - Ecuador </b>
+      </p>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,226 @@
+body,
+html {
+  height: 100%;
+}
+.icon-home {
+  color: #cce;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+
+.fondo {
+  width: 15%;
+  float: left;
+  color: white;
+  animation: icon 5s infinite;
+  text-align: left;
+  background-color: transparent;
+  position: absolute;
+  top: -3%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /*font-family: sans-serif;*/
+  font-family: Century Gothic;
+  /*background: rgba(84, 86, 90, 0.5);*/
+  background: rgba(217, 216, 214, 0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* No Scrollbar */
+  /*overflow: auto;*/
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.form-box {
+  width: 400px;
+  padding: 30px;
+  margin:  30px;
+  margin-bottom: 30px;
+  background: rgba(217, 216, 214, 0.5);
+  /* background: #191919;*/
+  text-align: center;
+  border-radius: 30px;
+}
+
+.form-title {
+  color: black;
+  /*text-transform: uppercase;*/
+  font-weight: 500;
+}
+
+label {
+  color: white;
+  padding-left: 0.2cm;
+  position: relative;
+  justify-content: space-evenly;
+}
+radio {
+  padding-left: 1.3cm;
+  position: relative;
+}
+
+.content-foo a:hover {
+  color: white;
+  background-color: rgba(217, 216, 214, 0.5);
+}
+.content-foo a {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  /*padding: 0px 30px;*/
+  margin: 0px 30px;
+}
+
+.logo_formulario {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  /*
+  width: 35%;
+  height: 35%;
+  text-align: center;
+  justify-content: center;
+  margin: 20px auto 50px auto;*/
+}
+
+
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="number"],
+.form-box input[type="date"],
+.form-box input[type="password"] {
+  border: 0;
+  background: white;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  border: 2px rgba(217, 216, 214);
+  padding: 10px 10px;
+  width: 300px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.form-box input[type="text"]:focus,
+.form-box input[type="password"]:focus {
+  width: 280px;
+  border-color: #ffffff;
+}
+
+.nav4 {
+  width: 50px;
+  font-size: 20px;
+  padding: 15px 0;
+  color: #f0f0f0;
+  text-shadow: -5px 10px 10px #f0f0f0;
+}
+
+.form-box h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-box p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+  position: absolute;
+}
+
+.form-box a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-box a:hover {
+  color: white;
+}
+
+.form-box button[type="submit"] {
+  border: 0;
+  background: red;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  border: 2px solid white;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  width: 300px;
+  font-size: 14px;
+}
+
+.form-box button[type="submit"]:hover {
+  background: none;
+}
+
+
+
+
+
+
+.options {
+    top: 25px;
+    right: 30px;
+    position: absolute;
+    /*width: 200px;*/
+    display: flex;
+  
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0px 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .icon-cog {
+    color: #cce;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  .icon-shopping-cart {
+    color: #cce;
+    font-size: 30px;
+    /*text-shadow: -5px 10px 10px #444;*/
+    margin-right: 10px;
+  }
+  
+  .icon-users {
+    color: #cce;
+    font-size: 30px;
+    /* text-shadow: -5px 10px 10px #444;*/
+    margin-right: 10px;
+  }
+  
+  
+  .fondo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+ 
+  footer {
+    color: white;
+    background-color: #161616;
+    text-align: center;
+    position: fixed;
+    padding: 1px 0;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+  
